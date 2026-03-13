@@ -1,10 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Rotty Bugggati</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Soccy is my bae</h1>
-    <p>if you read this you're gay</p>
+
+<canvas id="bg"></canvas>
+
+<nav class="navbar">
+
+<div class="logo">axenProvides</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<button id="themeToggle">🌙</button>
+
+</nav>
+
+
+<section id="home" class="hero">
+
+<h1>Everything A Streamer <span>Needs</span></h1>
+
+<p>Professional websites, partnership consulting, automation tools, discord bots, kick/discord integrations & more.</p>
+
+<a class="btn" href="#services">View Services</a>
+
+</section>
+
+
+<section id="about" class="about">
+
+<h2>About Me</h2>
+
+<p>
+Full stack developer focused on modern websites, automation and integrations.
+</p>
+
+</section>
+
+
+
+<section id="services" class="services">
+
+<h2>Services</h2>
+
+<div class="service-grid">
+
+<div class="card">
+<h3>Website Design</h3>
+<p><br>Modern responsive websites built for performance.<br><br> Fuel all your communities needs.</p>
+</div>
+
+<div class="card">
+<h3>Discord Bots</h3>
+<p><br>Custom automation and bot development. <br><br><span>Discord leaderboard creation & hosting</span></p>
+</div>
+
+<div class="card">
+<h3>API Integration</h3>
+<p><br>Connect platforms and <span>leaderboard APIs</span> to your website.<br><br><span>Telegram x Discord x Kick x Web Integrations</span></p>
+</div>
+
+<div class="card">
+<h3>UI/UX Design</h3>
+<p><br>Clean interfaces and smooth experiences.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="leaderboard" class="leaderboard">
+
+<h2>LEADERBOARD EXAMPLE</h2>
+
+<div class="podium">
+
+<div class="podium-card second">
+  <div class="box">
+    <div class="face front">
+      <div class="pin">📍</div>
+      <div class="rank">2</div>
+      <h3 id="rank2-name">---</h3>
+      <p id="rank2-score">0 pts</p>
+    </div>
+
+    <div class="face back"></div>
+    <div class="face right"></div>
+    <div class="face left"></div>
+    <div class="face top"></div>
+    <div class="face bottom"></div>
+  </div>
+</div>
+
+<div class="podium-card first">
+  <div class="box">
+    <div class="face front">
+      <div class="pin">📍</div>
+      <div class="rank">1</div>
+      <h3 id="rank1-name">---</h3>
+      <p id="rank1-score">0 pts</p>
+    </div>
+
+    <div class="face back"></div>
+    <div class="face right"></div>
+    <div class="face left"></div>
+    <div class="face top"></div>
+    <div class="face bottom"></div>
+  </div>
+</div>
+
+<div class="podium-card third">
+  <div class="box">
+    <div class="face front">
+      <div class="pin">📍</div>
+      <div class="rank">3</div>
+      <h3 id="rank3-name">---</h3>
+      <p id="rank3-score">0 pts</p>
+    </div>
+
+    <div class="face back"></div>
+    <div class="face right"></div>
+    <div class="face left"></div>
+    <div class="face top"></div>
+    <div class="face bottom"></div>
+  </div>
+</div>
+
+</div>
+
+
+<div class="leaderboard-list" id="leaderboardList"></div>
+
+<button id="expandLeaderboard" class="btn">Show Top 20</button>
+
+</section>
+
+<footer id="contact">
+
+<h3>Contact</h3>
+
+<div class="socials">
+
+<a href="#">Discord</a>
+<a href="#">Twitter</a>
+<a href="#">Github</a>
+<a href="#">Email</a>
+
+</div>
+
+<p>© 2026 YourBrand</p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
