@@ -3,15 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name</title>
+<title>Axen</title>
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<text y='0.9em' font-size='90'>💎</text>
+</svg>">
+
 </head>
 
 <body>
-
+<div class="scroll-progress"></div>
 <canvas id="bg"></canvas>
 
 <nav class="navbar">
@@ -20,12 +28,10 @@
 
 <ul>
 <li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
+<li><a href="#about"><span>Read Me</span></a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
-<button id="themeToggle">🌙</button>
 
 </nav>
 
@@ -34,7 +40,7 @@
 
 <h1>Everything A Streamer <span>Needs</span></h1>
 
-<p>Professional websites, partnership consulting, automation tools, discord bots, kick/discord integrations & more.</p>
+<p>Partnership Consulting, Professional Websites, Automation Tools, Discord Bots, Kick/Discord Integrations & more.</p>
 
 <a class="btn" href="#services">View Services</a>
 
@@ -43,10 +49,10 @@
 
 <section id="about" class="about">
 
-<h2>About Me</h2>
+<h2><span style="font-size: 40px; color: rgb(48, 87, 105);"> READ ME</span></h2>
 
 <p>
-Full stack developer focused on modern websites, automation and integrations.
+To be honest, I'm primarily a manager for influencers, conntent creators, streamers. What I have to offer is years of experience in the gambling industry. I have the insight, the info, the resources and the connections to make anything you could need, happen. I've worked every role there is, from a discord mod starting off to an affiliate manager. Along the way i gained all the skills needed to help you with anything. <br><br><span>Hit me up on discord for free consulting.</span>
 </p>
 
 </section>
@@ -55,9 +61,14 @@ Full stack developer focused on modern websites, automation and integrations.
 
 <section id="services" class="services">
 
-<h2>Services</h2>
+<h2>What I can do for you</h2>
 
 <div class="service-grid">
+
+<div class="card">
+<h3>Creator Consulting</h3>
+<p><br>Advice with your career.<br><br><span>Growth, Deal Appraisal, Answers to everything.</span></p>
+</div>
 
 <div class="card">
 <h3>Website Design</h3>
@@ -66,7 +77,7 @@ Full stack developer focused on modern websites, automation and integrations.
 
 <div class="card">
 <h3>Discord Bots</h3>
-<p><br>Custom automation and bot development. <br><br><span>Discord leaderboard creation & hosting</span></p>
+<p><br>Custom automation and bot development. <br><br><span>Discord Leaderboard creation & Hosting</span></p>
 </div>
 
 <div class="card">
@@ -75,8 +86,8 @@ Full stack developer focused on modern websites, automation and integrations.
 </div>
 
 <div class="card">
-<h3>UI/UX Design</h3>
-<p><br>Clean interfaces and smooth experiences.</p>
+<h3>Moderation</h3>
+<p><br>I have a lot of <span>community moderators </span> to take care of your community<br><br><span>Telegram x Discord x Kick x Twitch x Anything</span></p>
 </div>
 
 </div>
@@ -92,8 +103,8 @@ Full stack developer focused on modern websites, automation and integrations.
 <div class="podium-card second">
   <div class="box">
     <div class="face front">
-      <div class="pin">📍</div>
-      <div class="rank">2</div>
+    <div class="shine"></div>
+      <div class="rank medal silver">🥈</div>
       <h3 id="rank2-name">---</h3>
       <p id="rank2-score">0 pts</p>
     </div>
@@ -104,13 +115,14 @@ Full stack developer focused on modern websites, automation and integrations.
     <div class="face top"></div>
     <div class="face bottom"></div>
   </div>
+      <div class="pin">📍</div>
 </div>
 
 <div class="podium-card first">
   <div class="box">
     <div class="face front">
-      <div class="pin">📍</div>
-      <div class="rank">1</div>
+    <div class="shine"></div>
+      <div class="rank medal gold">👑</div>
       <h3 id="rank1-name">---</h3>
       <p id="rank1-score">0 pts</p>
     </div>
@@ -121,13 +133,14 @@ Full stack developer focused on modern websites, automation and integrations.
     <div class="face top"></div>
     <div class="face bottom"></div>
   </div>
+      <div class="pin">📍</div>
 </div>
 
 <div class="podium-card third">
   <div class="box">
     <div class="face front">
-      <div class="pin">📍</div>
-      <div class="rank">3</div>
+    <div class="shine"></div>
+      <div class="rank medal bronze">🥉</div>
       <h3 id="rank3-name">---</h3>
       <p id="rank3-score">0 pts</p>
     </div>
@@ -138,6 +151,7 @@ Full stack developer focused on modern websites, automation and integrations.
     <div class="face top"></div>
     <div class="face bottom"></div>
   </div>
+      <div class="pin">📍</div>
 </div>
 
 </div>
@@ -145,27 +159,45 @@ Full stack developer focused on modern websites, automation and integrations.
 
 <div class="leaderboard-list" id="leaderboardList"></div>
 
+<div class="leaderboard-controls">
 <button id="expandLeaderboard" class="btn">Show Top 20</button>
+<button id="collapseLeaderboard" class="btn" style="display:none;">Collapse</button>
+</div>
+
+</section>
+
+<section class="wip">
+
+<h2>Work In Progress</h2>
+
+<div class="wip-box">
+
+<p>
+🚧 This project is still growing.<br><br>
+More features, integrations, improvements and tools will be added soon.
+</p>
+
+</div>
 
 </section>
 
 <footer id="contact">
 
-<h3>Contact</h3>
+<h3>How to contact me?</h3>
 
 <div class="socials">
 
-<a href="#">Discord</a>
-<a href="#">Twitter</a>
-<a href="#">Github</a>
-<a href="#">Email</a>
+<a href="#"><i class="fa-brands fa-discord" style="color: white;"></i> axenprovides</a>
+<a href="#"><i class="fa-brands fa-twitter" style="color: white;"></i> WorkInProgress</a>
+<a href="#"><i class="fa-brands fa-github" style="color: white;"></i> WorkInProgress</a>
+<a href="#"><i class="fa-solid fa-envelope" style="color: white;"></i> WorkInProgress</a>
 
 </div>
 
-<p>© 2026 YourBrand</p>
+<p>© 2026 axenProvides ~ GambleAware®</p>
 
 </footer>
-
+<div class="cursor-glow"></div>
 <script src="script.js"></script>
 
 </body>

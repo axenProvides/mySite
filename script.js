@@ -43,14 +43,6 @@ requestAnimationFrame(animate)
 animate()
 
 
-const toggle = document.getElementById("themeToggle")
-
-toggle.onclick = () => {
-
-document.body.classList.toggle("light")
-
-}
-
 const observer = new IntersectionObserver(entries => {
 
 entries.forEach(entry => {
@@ -64,26 +56,17 @@ entry.target.classList.add("show")
 })
 
 document.querySelectorAll(".card").forEach(el => {
-
 observer.observe(el)
-
 })
+
 
 async function loadLeaderboard(){
 
 /*
-Replace this later with your API call:
+Replace this later with your API call
 
 const res = await fetch("YOUR API")
 const data = await res.json()
-
-Expected format example:
-
-[
- {name:"Player1", score:1200},
- {name:"Player2", score:1100}
-]
-
 */
 
 const data = [
@@ -133,7 +116,7 @@ const row=document.createElement("div")
 row.className="lb-row"
 
 if(rank>10){
-row.classList.add("hidden")
+row.classList.add("hidden","extra")
 }
 
 row.innerHTML=`
@@ -153,14 +136,54 @@ list.appendChild(row)
 loadLeaderboard()
 
 
-// expand button
+const expandBtn = document.getElementById("expandLeaderboard")
+const collapseBtn = document.getElementById("collapseLeaderboard")
 
-document.getElementById("expandLeaderboard").onclick=()=>{
 
-document.querySelectorAll(".hidden").forEach(el=>{
+expandBtn.onclick = () => {
+
+document.querySelectorAll(".extra").forEach(el=>{
 el.classList.remove("hidden")
 })
 
-document.getElementById("expandLeaderboard").style.display="none"
+expandBtn.style.display="none"
+collapseBtn.style.display="block"
 
 }
+
+
+collapseBtn.onclick = () => {
+
+document.querySelectorAll(".extra").forEach(el=>{
+el.classList.add("hidden")
+})
+
+collapseBtn.style.display="none"
+expandBtn.style.display="block"
+
+}
+
+const glow = document.querySelector(".cursor-glow")
+
+document.addEventListener("mousemove", e => {
+
+glow.style.left = e.clientX + "px"
+glow.style.top = e.clientY + "px"
+
+})
+
+const progress = document.querySelector(".scroll-progress")
+
+window.addEventListener("scroll", () => {
+
+const height =
+document.documentElement.scrollHeight -
+document.documentElement.clientHeight
+
+const scrolled =
+(window.scrollY / height) * 100
+
+progress.style.width = scrolled + "%"
+
+})
+
